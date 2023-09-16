@@ -10,6 +10,7 @@ import com.videovortex.myapplication.Models.MyName
 import com.videovortex.myapplication.R
 import com.videovortex.myapplication.databinding.FragmentThirdPageBinding
 
+//Todo clase que utiliza elview binding
 class ThirdPageFragment : Fragment() {
 
     private lateinit var binding: FragmentThirdPageBinding
@@ -23,9 +24,6 @@ class ThirdPageFragment : Fragment() {
         //Just for activities
         //binding = DataBindingUtil.setContentView(activity!!, R.layout.activity_main)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_third_page, container, false)
-
-        /*val binding = DataBindingUtil.inflate<FragmentThirdPageBinding>(inflater,
-            R.layout.fragment_third_page,container,false)*/
 
         // Infla el diseño de este fragmento
         return binding.root

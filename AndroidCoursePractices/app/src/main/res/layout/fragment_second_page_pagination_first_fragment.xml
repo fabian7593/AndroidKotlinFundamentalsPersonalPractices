@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seconf Page pagination First Framgnert"/>
+
+        <Button
+            android:id="@+id/go_to_second_fragment_manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to second fragment manual fragment"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

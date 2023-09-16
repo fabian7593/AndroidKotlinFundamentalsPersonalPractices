@@ -12,7 +12,7 @@ import com.videovortex.myapplication.PaginationActivity
 import com.videovortex.myapplication.R
 
 
-
+//TODO clase que maneja los datos y el view de manera manual
 class LateralMenuFirstFragment : Fragment() {
 
     lateinit var exampleGoToAnotherActivity : Button

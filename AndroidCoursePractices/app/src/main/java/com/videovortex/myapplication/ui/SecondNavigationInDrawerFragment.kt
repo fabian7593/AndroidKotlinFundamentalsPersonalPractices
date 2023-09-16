@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import com.videovortex.myapplication.R
 import com.videovortex.myapplication.databinding.FragmentDrawerCompleteFourthSecondBinding
 import androidx.navigation.fragment.findNavController
+import com.videovortex.myapplication.MainActivity
 
 //Logic fo back pressed button
 class SecondNavigationInDrawerFragment : Fragment() {
@@ -29,6 +31,8 @@ class SecondNavigationInDrawerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        //TODO sobreescribir el botn de on back press (navegacion android)
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             // Navega al Fragmento A
             navigateToFragmentA()
@@ -36,10 +40,9 @@ class SecondNavigationInDrawerFragment : Fragment() {
     }
 
     private fun navigateToFragmentA() {
-
+        //TODO retroceder a un fragment especifico desde Navigation UI Drawer
         val navController = findNavController()
         navController.popBackStack(R.id.nav_home,false)
-
     }
 
 

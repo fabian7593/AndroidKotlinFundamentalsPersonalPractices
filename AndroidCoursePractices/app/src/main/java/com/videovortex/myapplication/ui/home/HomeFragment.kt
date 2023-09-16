@@ -45,11 +45,11 @@ class HomeFragment : Fragment() {
         _binding?.nextFragment?.setOnClickListener{
 
 
+            //TODO utilizacion de secure args para pasar datos por fragments desde Navigation In Drawer
             val action = HomeFragmentDirections.actionNavHomeToFirstNavigationDrawerFragment(argKey = "Esto es una prueba de safe args entre Fragments")
             findNavController().navigate(action)
 
-
-            //Navigate withouth arguments
+            //TODO Navegar entre fragments de navigation In drawer sin arguments
             //it.findNavController().navigate(R.id.firstNavigationDrawerFragment)
         }
     }

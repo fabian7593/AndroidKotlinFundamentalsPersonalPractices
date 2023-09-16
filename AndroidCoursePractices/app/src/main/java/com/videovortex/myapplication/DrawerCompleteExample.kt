@@ -29,6 +29,7 @@ class DrawerCompleteExample : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarDrawerCompleteExample.toolbar)
 
+        //TODO logica de fab button
         binding.appBarDrawerCompleteExample.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -66,7 +67,7 @@ class DrawerCompleteExample : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                // Personaliza el comportamiento del botón de retroceso aquí
+                // TODO Personaliza el comportamiento del botón de retroceso del tab bar, espcificando como debe comportarse en cada fragment
                 //LOGIC TO GO BACK FROM TAB BAR
                 val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_drawer_complete_example)
                 val navController = navHostFragment?.findNavController()

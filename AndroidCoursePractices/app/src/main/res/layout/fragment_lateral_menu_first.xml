@@ -20,7 +20,7 @@
         android:id="@+id/exampleGoToDrawerActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Drawer activity Compose"
+        android:text="Go to Drawer activity With navigation controller"
         android:layout_gravity="center"
         android:gravity="center">
 

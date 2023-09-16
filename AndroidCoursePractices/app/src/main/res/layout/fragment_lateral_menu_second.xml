@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- fragment_my.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SECOOOND"
-        ></TextView>
+        android:text="Este es el drawer menu manual, segunda pagina"
+        />
+
+    <Button
+        android:id="@+id/goToAnotherFragmentManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to another fragment manual with bundle data"/>
 
 </LinearLayout>
+</layout>

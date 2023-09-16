@@ -50,6 +50,7 @@ class SecondPageFragment : Fragment() {
         // Puedes realizar cualquier inicialización de vistas o lógica específica de este fragmento aquí
     }
 
+    //TODO hide and show keyboard
     /**
      * Click handler for the DONE button.
      * Hides the EditText and the DONE button.

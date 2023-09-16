@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.core.app.Person.fromBundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.videovortex.myapplication.MainActivity
 import com.videovortex.myapplication.R
 import com.videovortex.myapplication.databinding.FragmentDrawerCompleteFourthBinding
 
@@ -29,12 +31,16 @@ class FirstNavigationInDrawerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //TODO atajar un secure args en el segundo fragment de navigation in drawer
         val argumentValue = FirstNavigationInDrawerFragmentArgs.fromBundle(requireArguments()).argKey
         Toast.makeText(view.context, argumentValue, Toast.LENGTH_SHORT).show()
 
 
         binding.nextFragment.setOnClickListener{
-            view.findNavController().navigate(R.id.secondNavigationDrawerFragment)
+
+            //TODO ir al sigueinte fragment desde navigation In Drawer
+             view.findNavController().navigate(R.id.secondNavigationDrawerFragment)
+
         }
     }
 }

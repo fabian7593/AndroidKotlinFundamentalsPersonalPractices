@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.videovortex.myapplication.R
 
+//TODO clase que maneja el view de manera manual pero es creado desde onViewCreated
 class FirstPageFragment : Fragment() {
 
     lateinit var diceImage : ImageView
