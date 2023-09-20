@@ -1,5 +1,6 @@
 package com.videovortex.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -53,9 +54,21 @@ class DrawerCompleteExample : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.drawer_complete_example, menu)
+
         return true
     }
 
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
+    }
+
+
+    private fun getShareIntent() : Intent {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain")
+            .putExtra(Intent.EXTRA_TEXT, "Go to sharing")
+        return shareIntent
+    }
 
 
     override fun onSupportNavigateUp(): Boolean {
@@ -81,6 +94,10 @@ class DrawerCompleteExample : AppCompatActivity() {
                 } else {
                     return super.onOptionsItemSelected(item)
                 }
+            }
+            R.id.action_settings -> {
+                shareSuccess()
+                return true
             }
             else -> return super.onOptionsItemSelected(item)
         }

@@ -26,9 +26,8 @@ class MainActivity : AppCompatActivity() {
     //TODO la logica de toogle para cambiar el arrow en cualquier pantalla
     private var toogle: ActionBarDrawerToggle? = null
 
-    // Método público para obtener el fragmento actual
-    fun getCurrentFragment(): Fragment? {
-        return currentFragment
+    fun getToggle() : ActionBarDrawerToggle?{
+        return toogle
     }
 
     //TODO este set de current fragment se setea en cada uno de los fragmentos en el createview
@@ -45,18 +44,18 @@ class MainActivity : AppCompatActivity() {
         navigationView = findViewById(R.id.navigation_view)
 
         // Configurar el ActionBarDrawerToggle para abrir/cerrar el menú lateral
-        val toggle = ActionBarDrawerToggle(
+        toogle = ActionBarDrawerToggle(
             this,
             drawerLayout,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
 
-        //toggle.isDrawerIndicatorEnabled = false
+        //TODO pone el hamburger de drawer menu lateral izquierdo como una flecha de back
+        toogle?.isDrawerIndicatorEnabled = true
 
-
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+        drawerLayout.addDrawerListener(toogle!!)
+        toogle?.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -90,6 +89,7 @@ class MainActivity : AppCompatActivity() {
 
         //TODO setea el current fragment
         currentFragment = newFragment
+        toogle?.isDrawerIndicatorEnabled = true
     }
 
     //TODO Esto maneja la logica de menu lateral izquierdo, par que funcione de distintas maneras en distitnos fragmentos

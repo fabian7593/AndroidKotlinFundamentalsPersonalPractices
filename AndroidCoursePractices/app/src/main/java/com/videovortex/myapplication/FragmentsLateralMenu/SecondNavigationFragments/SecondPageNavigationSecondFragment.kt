@@ -34,6 +34,7 @@ class SecondPageNavigationSecondFragment : Fragment() {
         // Establece el fragmento actual en la actividad
         val activity = requireActivity() as MainActivity
         activity.setCurrentFragment(this)
+        activity.getToggle()?.isDrawerIndicatorEnabled = false
 
         val bundle = arguments
         if (bundle != null) {

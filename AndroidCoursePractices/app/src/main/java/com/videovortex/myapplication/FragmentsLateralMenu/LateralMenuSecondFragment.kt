@@ -30,6 +30,7 @@ class LateralMenuSecondFragment : Fragment() {
         //TODO setea el current fragment
         val activity = requireActivity() as MainActivity
         activity.setCurrentFragment(this)
+        activity.getToggle()?.isDrawerIndicatorEnabled = true
 
         binding.goToAnotherFragmentManual.setOnClickListener {
 

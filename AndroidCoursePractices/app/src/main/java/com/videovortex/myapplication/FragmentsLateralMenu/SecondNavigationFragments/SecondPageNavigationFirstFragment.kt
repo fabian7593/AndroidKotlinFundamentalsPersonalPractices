@@ -28,8 +28,11 @@ class SecondPageNavigationFirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Establece el fragmento actual en la actividad
+        //TODO setea el fragment actual desde el activity actual
         val activity = requireActivity() as MainActivity
         activity.setCurrentFragment(this)
+
+        activity.getToggle()?.isDrawerIndicatorEnabled = false
 
         binding.goToSecondFragmentManual.setOnClickListener {
 

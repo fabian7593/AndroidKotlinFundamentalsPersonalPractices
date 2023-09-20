@@ -1,6 +1,7 @@
 package com.videovortex.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -9,6 +10,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.videovortex.myapplication.FragmentsPagination.FirstPageFragment
 import com.videovortex.myapplication.FragmentsPagination.SecondPageFragment
 import com.videovortex.myapplication.FragmentsPagination.ThirdPageFragment
+import timber.log.Timber
 
 class PaginationActivity : AppCompatActivity() {
 
@@ -52,4 +54,28 @@ class PaginationActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume Called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause Called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart Called")
+    }
 }
