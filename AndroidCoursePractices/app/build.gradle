@@ -53,6 +53,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.0'
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.3.1"
+    implementation 'androidx.room:room-common:2.4.2'
 
     /*implementation "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3"*/
 

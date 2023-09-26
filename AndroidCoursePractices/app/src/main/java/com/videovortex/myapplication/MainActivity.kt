@@ -11,10 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
-import com.videovortex.myapplication.FragmentsLateralMenu.LateralMenuFirstFragment
-import com.videovortex.myapplication.FragmentsLateralMenu.LateralMenuSecondFragment
-import com.videovortex.myapplication.FragmentsLateralMenu.SecondPageNavigationFirstFragment
-import com.videovortex.myapplication.FragmentsLateralMenu.SecondPageNavigationSecondFragment
+import com.videovortex.myapplication.FragmentsLateralMenu.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -70,6 +67,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_gallery -> {
                     changeFragment(LateralMenuSecondFragment(), "gallery_frag")
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+                R.id.nav_share -> {
+                    changeFragment(ShareFragment(), "share_frag")
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }

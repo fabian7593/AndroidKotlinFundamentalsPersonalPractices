@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_my.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="200px"
+            android:layout_marginRight="200px">
+
+            <TextView
+                android:id="@+id/text_view_live_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aca se van a mostrar los datos desde LIve Data"
+                android:layout_marginBottom="70px"
+                />
+
+            <EditText
+                android:id="@+id/edit_text_live_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70px"
+                />
+
+            <Button
+                android:id="@+id/button_change_data_from_view_binding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to another fragment manual with bundle data"
+                android:layout_marginBottom="70px"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
